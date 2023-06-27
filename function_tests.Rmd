@@ -1,0 +1,34 @@
+
+
+```{r}
+source('plot_functions.R')
+
+
+child_test_data = read.csv('data/child_data_test.csv')
+adult_test_data = read.csv('data/adult_data_test.csv')
+
+child_check_data = read.csv('data/child_data_check.csv')
+adult_check_data = read.csv('data/adult_data_check.csv')
+
+A = prep_data(child_check_data, "check")
+B = prep_data(child_check_data, "learn_half")
+C = prep_data(child_test_data, "test")
+D = prep_data(child_test_data, "distance")
+E = prep_data(child_test_data, "cont")
+
+plot_check_acc(B)
+
+plot_distance_acc(D)
+
+plot_block_acc(adult_test_data)
+
+
+
+```
+```{r}
+
+boop = test(child_test_data)
+    
+```
+
+
